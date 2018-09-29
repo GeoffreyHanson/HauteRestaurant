@@ -8,10 +8,13 @@ app.use(express.static(path.join(__dirname, 'public')));
 app.listen(PORT, () => {
     console.log(`Server listening on port ${PORT}`);
 });
-app.post("/api/tables/new", (req, res) => {
+app.post("/api/tables/new/", (req, res) => {
     req.body.routeName = req.body.name.replace(/\s+/g, "").toLowerCase();
     tables.push(req.body);
     res.send(req.body);
+});
+app.post("/api/clear/", (req, res) => {
+    tables = [{}];
 });
 const tables = [{
     ID: 'PlaceholderID',
