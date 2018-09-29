@@ -14,9 +14,9 @@ app.post("/api/tables/new/", (req, res) => {
     res.send(req.body);
 });
 app.post("/api/clear/", (req, res) => {
-    tables = [{}];
+    tables = [];
 });
-const tables = [{
+var tables = [{
     ID: 'PlaceholderID',
     name: 'Placeholder Joe',
     phone: '555-555-5555',

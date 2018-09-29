@@ -58,8 +58,7 @@
                 <p>Control Panel</p>
                 <p>
                     <a href="#" id="clear">Clear Table</a> |
-                    <a href="/api/tables">API Table Link</a> |
-                    <a href="/api/waitlist">API Wait List</a>
+                    <a href="/api/tables/">API Table Link</a>
                 </p>
             </div>
         </footer>
@@ -117,7 +116,7 @@
                 });
         }
         function clearTable() {
-            alert("Clearing...");
+            //alert("Clearing...");
             $.ajax({ url: "/api/clear", method: "POST" }).then(function () {
                 $("#waitList").empty();
                 $("#tableList").empty();
