@@ -118,11 +118,9 @@
                 });
         }
         function clearTable() {
-            //alert("Clearing...");
-            $.ajax({ url: "/api/clear", method: "POST" }).then(function () {
-                $("#waitList").empty();
-                $("#tableList").empty();
-            });
+            $("#waitList").empty();
+            $("#tableList").empty();
+            $.ajax({ url: "/api/clear", method: "POST" });
         }
         $("#clear").on("click", clearTable);
         runTableQuery();
