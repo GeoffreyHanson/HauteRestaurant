@@ -9,7 +9,7 @@ app.listen(PORT, () => {
     console.log(`Server listening on port ${PORT}`);
 });
 app.post("/api/tables/new/", (req, res) => {
-    req.body.routeName = req.body.name.replace(/\s+/g, "").toLowerCase();
+    //req.body.routeName = req.body.name.replace(/\s+/g, "").toLowerCase();
     tables.push(req.body);
     res.send(req.body);
 });
@@ -25,7 +25,9 @@ const tables = [{
 app.get('/api/tables/', (req, res) => {
     return res.json(tables);
 });
+/*
 app.get('/api/tables/:table', (req, res) => {
     characters.forEach((el) => { if (req.params.table === el.routeName) return res.send(el); });
     return res.json([false]);
 });
+*/
