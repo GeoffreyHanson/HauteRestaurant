@@ -20,7 +20,7 @@ app.get("/tables", function(req, res) {
 
 
 app.get("/api/reservations", function(req, res) {
-   res.sendFile(path.join(__dirname, "reservations.html"));
+   res.sendFile(path.join(__dirname, "reserve.html"));
    return res.json(reservations);
 });
 
