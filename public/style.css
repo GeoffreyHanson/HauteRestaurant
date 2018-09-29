@@ -1,6 +1,6 @@
-.myJumbo{
+.myJumbo {
     margin-bottom: 0px;
-    background-image: url(images/resturant.jpg);
+    background-image: url(../images/resturant.jpg);
     background-position: 0% 25%;
     background-size: cover;
     background-repeat: no-repeat;
